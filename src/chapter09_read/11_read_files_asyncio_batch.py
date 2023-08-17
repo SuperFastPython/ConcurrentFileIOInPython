@@ -14,7 +14,8 @@ async def load_files(filepaths, semaphore):
         # acquire the semaphore
         async with semaphore:
             # open the file
-            async with aiofiles.open(filepath, 'r') as hdl:
+            async with aiofiles.open(
+                filepath, 'r') as hdl:
                 # load the contents and add to list
                 data = await hdl.read()
                 # store loaded data
