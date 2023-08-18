@@ -19,8 +19,12 @@ You can access all Python .py files directly here:
 
 You can learn more about the book here:
 
-* coming soon...
-
+* [Gumroad](https://superfastpython.gumroad.com/l/pcf)
+* [Amazon Kindle](https://amzn.to/3OGrzg2)
+* [Amazon Paperback](https://amzn.to/3P0Ll7j)
+* [Google Books](http://books.google.com/books/about?id=TEnREAAAQBAJ)
+* [Google Play](https://play.google.com/store/books/details?id=TEnREAAAQBAJ)
+* [Goodreads](https://www.goodreads.com/book/show/197088434-concurrent-file-i-o-in-python)
 
 ### Book Blurb
 
