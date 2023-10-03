@@ -5,7 +5,7 @@ from os import listdir
 from os.path import join
 from shutil import move
 from concurrent.futures import ThreadPoolExecutor
-from time import time
+from time import perf_counter
 
 # move a file from source to destination
 def move_file(filename, src, dest):
@@ -29,10 +29,10 @@ def main(src='tmp', dest='tmp2'):
 # protect the entry point
 if __name__ == '__main__':
     # record start time
-    time_start = time()
+    time_start = perf_counter()
     # run the program
     main()
     # calculate the duration
-    time_duration = time() - time_start
+    time_duration = perf_counter() - time_start
     # report the duration
     print(f'Took {time_duration:.3f} seconds')

@@ -4,7 +4,7 @@ from os import listdir
 from os import rename
 from os.path import join
 from os.path import splitext
-from time import time
+from time import perf_counter
 
 # rename files in src
 def main(src='tmp'):
@@ -26,11 +26,11 @@ if __name__ == '__main__':
     times = list()
     for _ in range(3):
         # record start time
-        time_start = time()
+        time_start = perf_counter()
         # run the program
         main()
         # calculate the duration
-        time_duration = time() - time_start
+        time_duration = perf_counter() - time_start
         # report the duration
         print(f'>took {time_duration:.3f} seconds')
         # store the duration

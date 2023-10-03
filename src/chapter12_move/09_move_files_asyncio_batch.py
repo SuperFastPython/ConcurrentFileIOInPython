@@ -3,7 +3,7 @@
 from os import makedirs
 from os import listdir
 from os.path import join
-from time import time
+from time import perf_counter
 import asyncio
 from aiofiles.os import rename
 
@@ -40,10 +40,10 @@ async def main(src='tmp', dest='tmp2'):
 # protect the entry point
 if __name__ == '__main__':
     # record start time
-    time_start = time()
+    time_start = perf_counter()
     # execute the asyncio run loop
     asyncio.run(main())
     # calculate the duration
-    time_duration = time() - time_start
+    time_duration = perf_counter() - time_start
     # report the duration
     print(f'Took {time_duration:.3f} seconds')

@@ -6,7 +6,7 @@ from zipfile import ZipFile
 from zipfile import ZIP_DEFLATED
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import as_completed
-from time import time
+from time import perf_counter
 
 # load file into memory
 def load_file(filepath):
@@ -40,11 +40,11 @@ if __name__ == '__main__':
     times = list()
     for _ in range(3):
         # record start time
-        time_start = time()
+        time_start = perf_counter()
         # run the program
         main()
         # calculate the duration
-        time_duration = time() - time_start
+        time_duration = perf_counter() - time_start
         # report the duration
         print(f'>took {time_duration:.3f} seconds')
         # store the duration
